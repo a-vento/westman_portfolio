@@ -1,0 +1,443 @@
+    /* Homepage */
+    .homePage {
+        background-color: #415A77;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .intro {
+        font-size: 4.5rem;
+        color: white;
+        padding-top: 20%;
+        margin: auto;
+        width: 50%;
+        -webkit-text-stroke-width: 1px;
+        font-family: 'Questrial';
+        text-align: center;
+    }
+
+    /* Nav */
+    #toggle {
+        display: block;
+        position: fixed; 
+        top: 20px; 
+        left: 20px; 
+        z-index: 999;
+        width: 28px;
+        height: 30px;
+        margin: 30px auto 10px;
+        cursor: pointer; 
+        z-index: 999; 
+    }
+
+    #navbarSupportedContent {
+        display: none; 
+        position: fixed; 
+        top: 70px;
+        left: 20px;
+        background-color: white;
+        border-radius: 4px; 
+        z-index: 998; 
+        color: black;
+    }
+
+    .navbar-expand-lg .navbar-collapse.scrolled {
+        border-bottom: white solid 1px !important;
+    }
+    
+    /* Show the menu options when the toggle button is activated */
+    #toggle.on + #navbarSupportedContent {
+        display: block; 
+    }
+
+    #toggle span:after,
+    #toggle span:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -9px;
+    }
+
+    #toggle span:after{
+        top: 9px;
+    }
+    #toggle span {
+        position: relative;
+        display: block;
+    }
+
+    #toggle span,
+    #toggle span:after,
+    #toggle span:before {
+        width: 100%;
+        height: 5px;
+        background-color: #888;
+        transition: all 0.3s;
+        backface-visibility: hidden;
+        border-radius: 2px;
+    }
+
+    #toggle.on span {
+        background-color: transparent;
+    }
+    #toggle.on span:before {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #toggle.on span:after {
+        transform: rotate(-45deg) translate(7px, -8px);
+    }
+
+    nav{
+        padding-bottom: 120px;
+    }
+    .navbarScroll.navbarDark {
+        background-color: #415A77; 
+        opacity: 1; 
+        color: white; 
+    }
+    .navbarColor{
+        color: #415A77;
+    }
+
+    .navbar-toggler{
+        background-color: #415A77;
+    }
+
+    li.nav-item > a{
+        text-decoration: none;
+        padding:10px;
+        font-size: 20px;
+        color: #415A77;
+        font-family: 'Questrial';
+        border: solid #415A77 1px;
+        margin: 0;
+    }
+
+    li.nav-item > a:hover,
+    li.nav-item > a:focus {
+        color: red;
+        text-decoration: underline;
+    }
+
+    .text-animation {
+        font-size: 34px;
+        font-weight: 600;
+        min-width: 280px;
+        text-align: center;
+        padding-bottom: 30%;
+    }
+
+    .text-animation span {
+        position: relative;
+    }
+
+    .text-animation span::before {
+        content: "Web Developer";
+        color: white;
+        animation: words 20s infinite;
+    }
+
+    .text-animation span::after {
+        content: "";
+        background-color: #415A77;
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 3px solid #415A77;
+        right: -8px;
+        animation: cursor 0.4s infinite, typing 20s steps(14) infinite;
+    }
+
+    @keyframes cursor {
+        to {
+            border-left: 2px solid white;
+        }
+    }
+
+    @keyframes words {
+        0%,
+        20% {
+            content: "ENGINEER";
+        }
+        21%,
+        40% {
+            content: "PROGRAMMER";
+        }
+        41%,
+        60% {
+            content: "PROJECT MANAGER";
+        }
+        61%,
+        80% {
+            content: "RESEARCHER";
+        }
+        81%,
+        100% {
+            content: "CREATIVE";
+        }
+    }
+
+    @keyframes typing {
+        10%,
+        15%,
+        30%,
+        35%,
+        50%,
+        55%,
+        70%,
+        75%,
+        90%,
+        95% {
+            width: 0;
+        }
+        5%,
+        20%,
+        25%,
+        40%,
+        45%,
+        60%,
+        65%,
+        80%,
+        85% {
+            width: calc(100% + 8px);
+        }
+    }
+
+    /* About Styling */
+    .about {
+        padding-bottom: 30%; 
+        color: white;
+    }
+
+    #about-text{
+        font-size: 30px;
+        padding-top: 5%; 
+    }
+
+    #about > div > div > div.col-lg-8 > p{
+        padding-top: 100px;
+    }
+    h1{
+        font-family: 'Questrial';
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    h2{
+        font-family: 'Questrial';
+        grid-column: 2;
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        top: 0;
+        margin-top: 20px;
+    }
+    h3{
+        font-family: 'Questrial';
+        font-size: 15px;
+    }
+    h4{
+        font-family: 'Questrial';
+        position: relative;
+        border: solid 1px white;
+        padding: 40px;
+        font-size: 20px; /* Adjust font size as needed */
+        background-color: #415A77;
+        transition: background-color 0.6s ease;
+        margin-bottom: 20px; /* Adjust margin-bottom as needed */
+        top: 0; /* Ensure h4 starts from the top */
+    }
+    /* .g-container{
+        display: inline-block;
+    } */
+    h5{
+        font-family: 'Questrial';
+        font-size: 20px;
+        color: #415A77;
+    }
+    p{
+        font-family: 'Questrial';
+        font-size: 15px;
+    }
+
+    .timeline {
+        width: 80%;
+        height: auto;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .timeline-content {
+        color: #415A77;
+        padding: 1.75rem;
+        transition: 0.4s ease;
+        overflow-wrap: break-word !important;
+        background-color: #D9D9D9;
+    }
+
+    .timeline-component {
+        margin: 0px 20px 20px 20px;
+    }
+
+    /* Projects Styling */
+    #projects > div > h1{
+        font-size: 30px;
+        padding-top: 5%;
+    }
+      
+    .container {
+            width: 100% !important;
+            padding: 0 !important;
+            margin-right: auto;
+            margin-left: auto;
+    }
+    
+    .gradient-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .container-title {
+        text-align: center;
+        padding: 0 !important;
+        margin-bottom: 40px;
+        font-size: 40px;
+        color: #fff;
+        font-weight: 600;
+        line-height: 60px;
+    }
+    
+    .card {
+        max-width: 800px;
+        border: 0;
+        width: 100%;
+        margin-inline: auto;
+        margin-bottom: 50px;
+    }
+    
+    .container-card {
+        position: relative;
+        border: 2px solid transparent;
+        background: linear-gradient(45deg, #051221, #062140, #051221);
+        background-clip: padding-box;
+        padding: 40px;
+    }
+    
+    .card-title {
+        font-weight: 600;
+        color: white;
+        letter-spacing: -0.02em;
+        line-height: 40px;
+        font-style: normal;
+        font-size: 28px;
+        padding-bottom: 8px;
+    }
+    
+    .card-description {
+        font-weight: 600;
+        line-height: 32px;
+        color: hsla(0, 0%, 100%, 0.5);
+        font-size: 16px;
+    }
+      
+    @media screen and (min-width: 992px) {
+        #toggle {
+            display: none; 
+        }
+        #navbarSupportedContent {
+            display: block; 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #415A77; 
+            padding: 10px; 
+            border-radius: 0; 
+            z-index: 998; 
+            color: white; 
+
+        }
+        .navbar-scroll.navbar-dark.border-scroll {
+            border-bottom: white solid 1px !important;
+            background-color: red;
+        }
+        #navdark {
+            background-color: #415A77 !important; 
+            border: solid 1px white !important; 
+        }
+
+        li.nav-item > a{
+            color: white;
+        }
+        .about {
+            margin-top: 320px;
+            padding-top: 10px;
+            padding-bottom: 100px; 
+            color: white;
+        }
+    
+        #about-text{
+            font-size: 30px;
+            padding-top: 5%; 
+        }
+        h2{
+            top:0;
+            grid-row: 1;
+        }
+        h4{
+            position: relative;
+            top:100px;
+            grid-row: 2;
+            max-height: 15%;
+        }
+        .g-container{
+            display: grid;
+            grid-template-columns: 25% 75%;
+            max-height: 600px;
+        }
+        .timeline {
+            grid-column: 2;
+            display: grid;
+            grid-template-columns: 1fr 3px 1fr;
+            height: 10%;
+        }
+        .tcontainer{
+            grid-column: 2;
+            overflow: scroll;
+            margin-left: 50px;
+            max-height: 30%;
+            grid-row: 2;
+        }
+        .timeline-box {
+            position: relative;
+            background-image: linear-gradient(45deg, #dfe5ae, #fef42e, #dfdf00, white);
+            width: 3px;
+            height: 100%;
+        }
+        .main-box {
+            opacity: 0;
+        }
+        .timeline-circle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-image: linear-gradient(45deg, #dfe5ae, #fef42e, #dfdf00, white);
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+        }
+        .timeline-component:hover {
+            background-color: #a9c5e7;
+        }
+        h4:hover{
+            background-color: red;
+        }
+        #projects > div > h1 {
+            padding-top: 10%; 
+        }
+
+    }
