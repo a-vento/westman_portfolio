@@ -1,29 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('.navbar');
-    const navheader = document.querySelector('.navbar-brand');
-    const link1 = document.querySelector('a[href="#about"]');
-    const link2 = document.querySelector('a[href="#projects"]');
-    const link3 = document.querySelector('a[href="#resume"]');
-    const toggler = document.querySelector(".navbar-toggler");
-
-    if (header && link1 && link2 && link3) {
-        window.addEventListener('scroll', function() {
-            const top = window.scrollY;
-
-            if (top >= 50) {
-                header.classList.add('navbarDark');
-                link1.classList.add('navbarLinkColor');
-                link2.classList.add('navbarLinkColor');
-                link3.classList.add('navbarLinkColor');
-            } else {
-                header.classList.remove('navbarDark');
-                link1.classList.remove('navbarLinkColor');
-                link2.classList.remove('navbarLinkColor');
-                link3.classList.remove('navbarLinkColor');
-            }
-        });
-    }
-
+    // Navbar appears when scrolled
     const navbarCollapse = document.querySelector('.navbar-expand-lg .navbar-collapse');
 
     if (navbarCollapse) {
@@ -36,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Toggle on Mobile View
     const theToggle = document.getElementById('toggle');
-
     if (theToggle) {
         function toggleClass(elem, className) {
             if (elem.classList.contains(className)) {
@@ -51,4 +27,30 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         };
     }
+
+    // Cards text
+    const funCards = document.querySelectorAll('.fun-card');
+    const cardTexts = [
+        "Text for card 1",
+        "Text for card 2",
+        "Text for card 3",
+        "Text for card 4",
+        "Text for card 5",
+        "Text for card 6",
+    ];
+
+    const originalText = [];
+    funCards.forEach((card, index) => {
+        originalText.push(card.querySelector('.fun-title').textContent);
+
+        card.addEventListener('mouseover', () => {
+            card.querySelector('.fun-title').textContent = cardTexts[index];
+            card.querySelector('.fun-title').style.fontSize = '20px';
+        });
+
+        card.addEventListener('mouseout', () => {
+            card.querySelector('.fun-title').textContent = originalText[index];
+            card.querySelector('.fun-title').style.fontSize = '';
+        });
+    });
 });
